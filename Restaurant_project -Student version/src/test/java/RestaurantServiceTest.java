@@ -9,13 +9,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantServiceTest {
 
-    LocalTime openingTime = LocalTime.parse("10:30:00");
-    LocalTime closingTime = LocalTime.parse("22:00:00");
+    public static final LocalTime OPENING_TIME = LocalTime.parse("10:30:00");
+    public static final LocalTime CLOSING_TIME = LocalTime.parse("22:00:00");
     RestaurantService service = new RestaurantService();
     Restaurant restaurant;
     //REFACTOR ALL THE REPEATED LINES OF CODE
     private Restaurant getRestaurantAdded() {
-        restaurant=service.addRestaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+        restaurant=service.addRestaurant("Amelie's cafe","Chennai",OPENING_TIME,CLOSING_TIME);
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
         return restaurant;
